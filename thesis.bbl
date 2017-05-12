@@ -1,0 +1,9 @@
+\begin{thebibliography}{1}
+
+\bibitem{akiba-tcs-2016}
+T.~Akiba and Y.~Iwata.
+\newblock Branch-and-reduce exponential/{FPT} algorithms in practice: A case
+  study of vertex cover.
+\newblock {\em Theoretical Computer Science}, 609, Part 1:211--225, 2016.
+
+\end{thebibliography}
