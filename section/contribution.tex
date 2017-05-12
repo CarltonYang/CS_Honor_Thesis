@@ -1,0 +1,18 @@
+\documentclass[../thesis.tex]{subfiles}
+\begin{document}
+\chapter{Contribution}
+\label{ch:pruning}
+Given the limitations of the currently available alternatives discussed earlier, I decided that the new program should address all of them. In particular, this new program will: \\
+\begin{enumerate}
+	\item Accept delay differential equation models as inputs,
+	\item Includes user-friendly interface for entering model information,
+	\item Automatically generate necessary data structures and corresponding functions,
+	\item Simulate using desired numerical solvers, including both deterministic and stochastic methods,
+	\item Be highly modularized and can be extended or updated easily in the future,
+	\item Support GPU for better performance.\\
+\end{enumerate}
+
+The entire software will be developed over the next few years, and for the purpose of this thesis, I will mainly focus on the design and development elements of the simulation function within the new system. Simulation is the most complicated and time-consuming section of the entire system because it mimics the entire biological process for every species, cell, and time step. In addition, it provides a foundation for feature extraction and testing, as well as connection between parameter estimation and the rest of the system. Therefore, the simulation section is essential in the construction of the entire software and its completion can provide insights for building other parts of the system moving forward. \\
+\\
+The whole project starts with preliminary conversion of the original system into a GPU accelerated system and I expect to discover flaws of the original system as well as exploring potential solutions to fix them. The second half of the project will include construction of a whole new system that will address the flaws identified during preliminary work as well as difficulty in model switch and system update.
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass[../thesis.tex]{subfiles}
+\begin{document}
+\chapter{Conclusion}
+\section{Contributions}
+I have constructed a new system that allows for easier model switching and independent simulation updates. Additionally, this system reduces the memory requirement on CPU and GPU computing environments, and improves the overall runtime in simulating multiple parameter sets. \\
+\\
+A copy of the system is available at: \\
+https://github.com/CarltonYang/DelayDifferentialEqnSimulator-1\\
+Note to compile the system with GPU acceleration, \textit{nvcc} version 7.0 or above is needed. In addition, a NVIDIA GPU card is need to run the test files with GPU acceleration. A make file is provided with the system.\\
+\\
+At this stage of the project, much of the simulation process is complete and desirable results have been attained. There are potential improvements, however, that can be implemented to the system in the future. 
+\section{Future Work}
+One potential improvement to the system is to add a more user-friendly interface for model input. Compared to the original system, the current model information is represented in a systematic and well-organized manner which is already intuitive. Yet there is potential for more user-friendly interface. By implementing such an interface, the software can maximize research potential by reducing the time expended for tedious manual input. Also, the software reduces the possibility of programming error in entering model information. \\
+\\
+An alternative improvement would involve the addition of a new simulation mechanism in the system. Currently, a deterministic simulation, solved by Euler?s Method, is employed to mimic the regulatory network of the zebrafish segmentation clock. A more realistic and comprehensive biological model can be constructed by applying probabilistic simulation methods. Under such a simulation scheme, probabilistically determined propensities and reaction times are used to decide which reactions fire at each iteration. Reactions with higher propensities are more likely to fire. Since stochastic simulation typically requires more resources than deterministic simulations, such as memory and computation power, stochastic simulation methods were omitted in the original system. With major improvements in space and time efficiency, stochastic simulations, such as the next reaction method, may now be feasible in the new system.\\
+\\
+A further improvement to the system could involve developments to the feature extraction section. Profiling of the original model demonstrated that feature extraction occupying nearly thirty percent of the entire simulation runtime. Under the original system structure, all concentration levels were saved during simulation and then later utilized for feature calculations. Conversion of feature extraction onto GPU might further improve system runtime. This is because feature extraction is necessary for all parameter sets and mutants. In addition, every determined block on GPU will have relatively the same amount of work to complete and thus most of the blocks can run in parallel and resource waste will be kept as minimum.
+\end{document}
